@@ -126,6 +126,28 @@ ImageLoader.load(user.getProfileUrl())
 ```
 - 수정방법: `Preferences` -> `Editor` -> `File and Code Templates` -> `includes`탭 -> `File Header` 내용 삭제
 
+## Annotation
+- 외부에서 호출할 수 있는 public 함수에서는 항상 `@NonNull` / `@Nullabe` 어노테이션을 추가해준다.
+
+```java
+
+    public RegisterStepManager(@NonNull RegisterContract.View view,
+                               @NonNull Activity activity,
+                               @NonNull RegisterContract.Presenter presenter,
+                               @NonNull ActivityRegisterBinding binding,
+                               @NonNull String registerHashId) {
+        this.view = view;
+        this.activity = activity;
+        this.presenter = presenter;
+        this.binding = binding;
+        this.registerHashId.set(registerHashId);
+        binding.setIsLoading(isLoading);
+        setMessageRecyclerView();
+        setListener();
+    }
+
+```
+
 ## 기타
 - `import static xx.xx.xx;`는 사용하지 않는다. ([Avoid static imports](https://carlosbecker.com/posts/avoid-static-imports/))
 
