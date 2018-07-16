@@ -165,7 +165,12 @@ ImageLoader.load(user.getProfileUrl())
 
 ## 기타
 - `import static xx.xx.xx;`는 사용하지 않는다. ([Avoid static imports](https://carlosbecker.com/posts/avoid-static-imports/))
-
+- `try/catch`를 사용한경우, Exception에 대한 처리를 항상 넣어준다.
+```java
+} catch (Exception e) {
+    AnalyticsUtil.logException(e);
+}
+```
 
 
 # Resource
