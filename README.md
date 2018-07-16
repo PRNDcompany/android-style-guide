@@ -65,6 +65,14 @@ public static UserFragment newInstance(User user) {
 #### 기타
 - `startActivity()` / `getIntent()` / `newInstance()`에서 쓰이는 Key는 항상 `private static final`로 만든다.
 
+### Lambda Parameter
+- 사용되지 않는 Parameter의 이름은 `__`를 사용한다.
+: 무시해야 하는 Parameter가 여러개라면 `__`, `___`, `____` 등으로 정의한다.
+```java
+binding.viewContainer.setOnClickListener(__ -> startRegisterActivity());
+binding.tvConfirm.setOnClickListener(__ -> dismiss());
+```
+
 ## Line
 - 1줄에 100자를 넘지 않도록 작성한다.
 - 코드간의 간격은 2줄이상 간격이 발생하지 않도록 한다.(최대 1줄 줄바꿈)
@@ -120,12 +128,7 @@ ImageLoader.load(user.getProfileUrl())
 
 ## 기타
 - `import static xx.xx.xx;`는 사용하지 않는다. ([Avoid static imports](https://carlosbecker.com/posts/avoid-static-imports/))
-- 사용되지 않는 Parameter의 이름은 `__`를 사용한다.
-: 무시해야 하는 Parameter가 여러개라면 `__`, `___`, `____` 등으로 정의한다.
-```java
-binding.viewContainer.setOnClickListener(__ -> startRegisterActivity());
-binding.tvConfirm.setOnClickListener(__ -> dismiss());
-```
+
 
 
 # Resource
