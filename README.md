@@ -67,6 +67,8 @@ public static UserFragment newInstance(User user) {
 
 ## Line
 - 1줄에 100자를 넘지 않도록 작성한다.
+- 코드간의 간격은 2줄이상 간격이 발생하지 않도록 한다.(최대 1줄 줄바꿈)
+
 ### Parameter
 - Parameter개수가 많아서 줄바꿈이 필요한 경우, **`,`다음부터 줄바꿈한다.**
 ```java
@@ -78,12 +80,24 @@ public InputSingleTextView(Context context,
   ...
 }
 ```
+- 줄바꿈이 필요한 부분부터 줄바꿈 하지 않고 위의 예시처럼 1개 단위로 줄바꿈을 해준다.
+- 이런 함수를 호출하는 코드에서도 같은 패턴으로 맞춰서 호출한다.
+```java
+new InputSingleTextView(this,
+   RegisterStep.XXX,
+   getString(R.string.xxx),
+   getString(R.string.xxx),
+   completeListener);
+```
+
+
 ### Operator
 - 많은 operator의 연산으로 줄바꿈이 필요한 경우, **operator 전에 줄바꿈한다.**
 ```java
 int longName = anotherVeryLongVariable + anEvenLongerOne - thisRidiculousLongOne
         + theFinalOne;
 ```
+- 연산자의 경우는 줄바꿈이 필요한 위치부터 줄바꿈한다.
 
 ### Method chain
 - Builder/RxJava 등 여러 함수를 chaining으로 사용하면서 줄바꿈이 필요한 경우, **`.`전에 줄바꿈한다.**
@@ -107,10 +121,12 @@ ImageLoader.load(user.getProfileUrl())
 ## 기타
 - `import static xx.xx.xx;`는 사용하지 않는다. ([Avoid static imports](https://carlosbecker.com/posts/avoid-static-imports/))
 - 사용되지 않는 Parameter의 이름은 `__`를 사용한다.
+: 무시해야 하는 Parameter가 여러개라면 `__`, `___`, `____` 등으로 정의한다.
 ```java
 binding.viewContainer.setOnClickListener(__ -> startRegisterActivity());
 binding.tvConfirm.setOnClickListener(__ -> dismiss());
 ```
+
 
 # Resource
 
@@ -231,6 +247,7 @@ binding.tvConfirm.setOnClickListener(__ -> dismiss());
 <dimen name="register_car_item_grade_start_padding">56dp</dimen>  
 <dimen name="register_car_item_car_detail_start_padding">72dp</dimen>
 ```
+- 2번이상 쓰이는경우는 dimen에 정의해주는 것을 강제하고 1번만 쓰이는경우에는 xml코드에 넣어도 괜찮은것으로 한다.
 
 ### Height/Size
 - 높이만 지정할때는 `height`, 1:1 비율로 같은 값이 들어갈때는 `size`로 한다.
