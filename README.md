@@ -199,7 +199,16 @@ ImageLoader.load(user.getProfileUrl())
 ## ID
 - `<WHAT>_<DESCRIPTION>`
 - View의 대문자를 축약하여 `<WHAT>`의 Prefix로 사용한다.
-- 아래표에 해당 View의 Prefix가 정의되어 있지 않다면 팀에서 상의해서 이름을 정한뒤 추가한다.
+- 아래 이름규칙을 적용한다.
+1. Android의 View는 CamelCase의 대문자를 축약한 형태로 정한다.
+</br>: `TextView -> tv_`
+2. 만약 View의 이름이 Space, Switch와 같이 1개의 대문자만 존재한다면 모두 소문자인 아이디로 정한다.
+</br>: `Switch -> switch_`
+3. CustomView는 전체View의 이름을 snake case이름으로 정한다.
+</br>: `MycustomView -> my_custom_view`
+</br>(만약 1개의 xml에 같은 여러 CustomView가 존재한다면 `<WHAT>_<DESCRIPTION>`의 형태로 정한다.)
+4. 아래표에 해당 View의 Prefix가 정의되어 있지 않다면 팀에서 상의해서 이름을 정한뒤 추가한다.
+
 
 ### WHAT
 | View | Prefix |
@@ -213,9 +222,11 @@ ImageLoader.load(user.getProfileUrl())
 | FrameLayout | `fl_` |
 | NestedScrollView | `nsv_` |
 | Space | `space_` |
-| Switch | `sw_` |
+| Switch | `switch` |
 | AbcDeFgh | `adf_` |
-
+| Abcdef | `abcdef_` |
+| MyCustomView | `my_custom_view` |
+| YourView | `your_view` |
 
 
 ### 기타
