@@ -163,6 +163,25 @@ ImageLoader.load(user.getProfileUrl())
 - 내부적으로 state 혹은 information을 가지고 있어서 호출한곳에서의 상태에 따라서 관리되는 값을 변경하고 반영하는 작업을 해준다.
 - 예) `RegisterStepManager`, `RegisterCarInfoConfirmManager`등
 
+## if문
+- `if (isChecked == false)` 와 같은 코드는 명백한 Lint warning이므로 사용하지 않는다.
+```java
+if (isUnchekced)
+```
+
+- 조건문에 `!`를 넣는것대신 아래와 같은 규칙으로 코드를 작성한다.
+
+1. 조건문에서 체크되는 boolean 변수/함수는 항상 긍정문으로 작성한다.
+`if(isChecked())`
+2. 이미 부정문으로 작성되어 있는 함수가 있다면 이를 재사용하여 함수를 작성한다.
+`if(isUnchekced())`
+
+```
+private boolean isUnchekced(){
+        return !isChecked();
+}
+```
+
 ## 기타
 - `import static xx.xx.xx;`는 사용하지 않는다. ([Avoid static imports](https://carlosbecker.com/posts/avoid-static-imports/))
 - `try/catch`를 사용한경우, Exception에 대한 처리를 항상 넣어준다.
