@@ -182,3 +182,6 @@
 ...
 </declare-styleable>
 ```
+
+## 기타
+- `android:xxxLeft/android:xxxRight` 대신 `android:xxxStart/android:xxxEnd`로 사용한다.(기타 Left/Right로 사용하는 부분 모두)
