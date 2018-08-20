@@ -123,7 +123,7 @@ ImageLoader.load(user.getProfileUrl())
 - 수정방법: `Preferences` -> `Editor` -> `File and Code Templates` -> `includes`탭 -> `File Header` 내용 삭제
 
 ## Annotation
-- 외부에서 호출할 수 있는 public 함수에서는 항상 `@NonNull` / `@Nullabe` 어노테이션을 추가해준다.
+- 외부에서 호출할 수 있는 public 함수에서는 항상 `@NonNull` / `@Nullable` 어노테이션을 추가해준다.
 
 ```java
 
