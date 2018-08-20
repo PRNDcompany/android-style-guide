@@ -105,7 +105,7 @@
 - `btn_call_pressed.png`: 전화걸기 버튼 눌렸을때의 이미지
 - `btn_call.xml`: 전화걸기 버튼 이미지의 selector xml
 - `ic_dealer_gift.png`: 딜러가 보내준 기프티콘을 보여줄때 표시되는 이미지
-- `image_splash_chart.png`: 스플래시 화면에서 보여지는 차트 이미지
+- `img_splash_chart.png`: 스플래시 화면에서 보여지는 차트 이미지
 -
 
 ## Dimension
