@@ -149,6 +149,15 @@
 - `all_yes`: 네
 - `all_ok_understand`: 여러 Dialog에서 `네, 알겠습니다`로 쓰이는 공통의 텍스트
 
+### 문단
+- 문단형태의 긴 문자열로 개행(`\n`)이 필요한 경우, `\n`을 다음줄의 앞에 쓴다.
+```xml
+ <string name="sample">문단 첫번째줄
+        \n문단 두번째줄
+        \n문단 세번째줄</string>
+````
+
+
 ## Theme/Style
 - Theme는 `theme.xml`, Style은 `style.xml`에 추가한다.
 - 1번만 쓰이는 경우에는 style을 만들지 않는다.
