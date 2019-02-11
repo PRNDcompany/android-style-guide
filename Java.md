@@ -20,11 +20,14 @@ public void loadCar(Context context, int hashId, CarListener listener);
 | `EXTRA_` | Intent |
 | `PREF_` | SharedPreferences |
 | `ARGUMENT_` | Fragment Arguments |
+| `QUERY_` | Deeplink query parameter key |
 - Key-Value로 활용되는 컴포넌트들의 Key는  `static final`로 정의한다.
 - Key로 정의된 이름의 String값은 동일하게 맞춰준다.
+- Deeplink에서 사용되는 Query Parameter의 경우 `aaa://bb?key1=value1&key2=value2`와 같은 방식으로 전달되기때문에 query key와 맞춰준다.
 ```java
 public static final String EXTRA_HASH_ID = "EXTRA_HASH_ID";
 public static final String EXTRA_TRADE = "EXTRA_TRADE";
+public static final String QUERY_REFERRER = "referrer";
 ```
 
 ### Key with Activity/Fragment
