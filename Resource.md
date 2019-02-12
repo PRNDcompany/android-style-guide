@@ -61,7 +61,7 @@
 ### 예시
 - `iv_close`: 닫기 ImageView
 - `tv_select`: 선택 TextView
-- `rc_car_list`: 자동차 목록 RecyclerView
+- `rv_car_list`: 자동차 목록 RecyclerView
 - `view_etc_model`: 기타 모델 화면 LinearLayout
 
 ## Drawable
