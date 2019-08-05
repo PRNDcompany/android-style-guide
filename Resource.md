@@ -24,7 +24,7 @@
 - `<WHAT>_<DESCRIPTION>`
 - View의 대문자를 축약하여 `<WHAT>`의 Prefix로 사용한다.
 - 아래 이름규칙을 적용한다.
-1. Android의 View는 CamelCase의 대문자를 축약한 형태로 정한다.
+1. Android의 View는 PascalCase의 대문자를 축약한 형태로 정한다.
 </br>: `TextView -> tv_`
 2. 만약 View의 이름이 Space, Switch와 같이 1개의 대문자만 존재한다면 모두 소문자인 아이디로 정한다.
 </br>: `Switch -> switch_`
