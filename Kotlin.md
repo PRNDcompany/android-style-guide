@@ -46,3 +46,35 @@ when (color) {
     GREEN -> // ...
 }.exhaustive
 ```
+
+## 함수 이름
+- ViewModel을 observe()할때 모아놓는 함수 이름
+```kotlin
+setupXXX()
+```
+
+- 서버에서 데이터를 불러올때 함수 이름
+```kotlin
+fetchXXX()
+```
+
+- 서버에 저장할때 함수 이름
+```kotlin
+saveXXX()
+```
+
+- Return이 있는 데이터를 불러올때 함수 이름
+```kotlin
+getXXX()
+```
+
+- 특정 객체를 찾는 함수이름
+```
+findXXX()
+```
+
+- 복수형을 가져올때는 뒤에 s를 붙인다
+```kotlin
+getBrands()      // O
+getBrandList()   // X
+```
