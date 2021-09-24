@@ -21,10 +21,12 @@
 ## XXXLocal
 - 만약 Room DB를 사용하는 domain 클래스에 NonNull인 필드를 새로 추가하게 된다면 Local Class에서는 어쩔수없이 Nullable로 선언하고 mapping할때 default value를 지정하는 방법으로 구현해야 함
 - 예)
-  - User에 email이 추가되어야함
-  - email이 NonNull이기때문에 UserLocal에 필드를 추가할때 email을 NonNull로 선언해야 할것 같지만
-  - 기존에 DB에 저장되어 있는 데이터에는 email 값이 없으므로 기존에 저장된 db를 toData()로 하려고 할때 문제가 발생함
-  - XXXLocal의 class는 새로 추가될때 항상 Nullable로 만들고 toData()로 mapping될때 기본값을 선언해줘야 함
+```
+- User에 email이 추가되어야함
+- email이 NonNull이기때문에 UserLocal에 필드를 추가할때 email을 NonNull로 선언해야 할것 같지만
+- 기존에 DB에 저장되어 있는 데이터에는 email 값이 없으므로 기존에 저장된 db를 toData()로 하려고 할때 문제가 발생함
+- XXXLocal의 class는 새로 추가될때 항상 Nullable로 만들고 toData()로 mapping될때 기본값을 선언해줘야 함
+```
 
 ## Model Mapping 정의/구조
 - Model은 각각의 layer에 만들어져서 mapping되도록 구성한다
