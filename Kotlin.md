@@ -67,17 +67,17 @@ getBrandList()   // X
 - 한 줄에 들어가는 when 분기는 중괄호를 사용하지 않는다.
 ```kotlin
 when (value) {
-	0 -> return
-	// ...
+    0 -> return
+    // ...
 }
 ```
 
 - 여러개의 조건을 동시에 사용하는 경우 `->`를 포함한 블록은 내려서 작성한다.
 ```kotlin
 when (value) {
-	foo -> // ...
-	bar,
-	baz
-	-> return
+    foo -> // ...
+    bar,
+    baz
+    -> return
 }
 ```
