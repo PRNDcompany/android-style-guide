@@ -97,7 +97,8 @@
 
 ### 기타
 
-- `img_xxx`의 경우 파일의 크기가 큰경우가 많으므로 [tinypng](https://tinypng.com/)에서 파일크기를 줄인뒤에 추가 해주어야 한다.
+- `img_xxx`의 경우 파일의 크기가 큰경우가 많으므로 [tinypng](https://tinypng.com/)에서 파일크기를 줄인뒤에 추가 해주어야 한다. (GitHub [imgbot](https://github.com/marketplace/imgbot)을 사용한다면 생략 가능)
+  - 대부분 용량이 큰 파일이어서 xxxhdpi에만 넣는다. 
 
 
 ### 예시
@@ -110,6 +111,8 @@
 
 ## Dimension
 - `<WHERE>_<DESCRIPTION>_<WHAT>`
+- 여러 군데에서 재사용되는 개념이라면 변수로 정의해서 `@dimen/xxx`와 같이 사용
+- 그렇지 않다면 명시적으로 `16dp`와 같이 작성
 
 ### Margin/Padding
 - 대부분의 `margin/padding`은 아래 정의된 `space_xxx`로만 사용되도록 한다.
