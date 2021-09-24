@@ -97,7 +97,7 @@
 
 ### 기타
 
-- `img_xxx`의 경우 파일의 크기가 큰경우가 많으므로 [tinypng](https://tinypng.com/)에서 파일크기를 줄인뒤에 추가 해주어야 한다.
+- `img_xxx`의 경우 파일의 크기가 큰경우가 많으므로 [tinypng](https://tinypng.com/)에서 파일크기를 줄인뒤에 추가 해주어야 한다. (GitHub [imgbot](https://github.com/marketplace/imgbot)을 사용한다면 생략 가능)
   - 대부분 용량이 큰 파일이어서 xxxhdpi에만 넣는다. 
 
 
