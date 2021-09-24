@@ -23,6 +23,10 @@ when (color) {
 }.exhaustive
 ```
 
+> [Exhaustive when statement (공식 지원)](https://kotlinlang.org/docs/whatsnew1530.html#exhaustive-when-statements-for-sealed-and-boolean-subjects)
+> 
+> [Exhaustive plugin & 대안](https://github.com/cashapp/exhaustive#alternatives-considered)
+
 ## Naming Rules
 ### LiveData
 - xml에서 클릭시 사용되는 LiveData의 변수명은 xxxEvent로 선언: [Google blueprint 코드 참고](https://github.com/android/architecture-samples/blob/272cd63c8e6e37eecc0398a19415f7c4dc6950d5/app/src/main/java/com/example/android/architecture/blueprints/todoapp/taskdetail/TaskDetailViewModel.kt#L60)
