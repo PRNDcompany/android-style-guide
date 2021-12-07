@@ -40,3 +40,31 @@ fun `1 더하기 2는 3이어야 한다`() { /**/ }
 @Test
 fun `Calculator에서 add(1, 2)를 호출하면 3을 반환해야 한다`() { /**/ }
 ```
+
+### 테스트 클래스 이름
+- IDE의 기본을 따라 `Calculator`에 대한 테스트 클래스는 `CalculatorTest`로 한다.
+```kotlin
+// Calculator.kt
+class Calculator { /* ... */ }
+```
+```kotlin
+// CalculatorTest.kt
+class CalculatorTest { /* ... */ }
+```
+
+- top-level 함수만 모여있는 `CalculatorExtension.kt` 파일에 대한 테스트 클래스 이름은 `CalculatorExtensionTest.kt`로 한다.
+```kotlin
+// CalculatorExtension.kt
+fun Calculator.foo() { /* ... */ }
+fun Calculator.bar() { /* ... */ }
+```
+```kotlin
+// CalculatorExtensionTest.kt
+class CalculatorExtensionTest { /* ... */ }
+```
+
+> IDE에서는 `CalculatorExtension.kt` 파일에 대한 테스트 클래스를 기본적으로 `CalculatorExtensionKtTest.kt`로 인식한다.
+> 그럼에도 불구하고 `CalculatorExtensionTest.kt`와 같이 사용하는 이유는 다음과 같다. 
+> 
+> - IDE 기능 때문에 `Kt`를 붙이는 것이 code smell로 여겨짐
+> - IDE 기능을 쓰지 못한다고 해서 테스트 코드 작성에 치명적인 이슈는 되지 않음
