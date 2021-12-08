@@ -63,6 +63,20 @@ getBrands()      // O
 getBrandList()   // X
 ```
 
+- Raw 값으로부터 enum을 찾을 때 함수 이름은 `find()`로 한다.
+```kotlin
+enum class Color {
+    RED, BLUE, GREEN;
+
+    fun find(rawColor: String): Color = when (rawColor) {
+        "red" -> RED
+        "blue" -> BLUE
+        "green" -> GREEN
+        else -> throw IllegalArgumentException("invalid color: $rawColor")
+    }
+}
+```
+
 ## Formatting
 ### 개행
 - 생성자, 함수에서 Parameter를 정의할때 한줄로 정의 가능하면 한줄, 그렇지 않으면 각 parameter별로 개행한다.

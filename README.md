@@ -9,6 +9,7 @@
 - [Resource](Resource.md)
 - [Gradle](Gradle.md)
 - [Architecture](Architecture.md)
+- [Test](Test.md)
 
 
 # 기타
