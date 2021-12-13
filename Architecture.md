@@ -11,15 +11,16 @@
 - 다만 데이터에 해당되는 `R.string.xxx`, `R.dimen.xxx`, `R.color.xxx`들은 사용할 수 있도록 함
   - (`R.id.xxx`, `R.layout.xxx`는 불가)
 - `SavedStateHandle`은 생성자의 첫번째에 위치한다.
+
+Do
 ```kotlin
-// Do
 class XxxViewModel @Inject constructor(
   savedStateHandle: SavedStateHandle,
   private val getFooUseCase: GetFooUseCase,
 ) : ViewModel()
 ```
+Do not
 ```kotlin
-// Do not
 class XxxViewModel @Inject constructor(
   private val getFooUseCase: GetFooUseCase,
   savedStateHandle: SavedStateHandle,
