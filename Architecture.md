@@ -14,6 +14,7 @@
 
 Do
 ```kotlin
+@HiltViewModel
 class XxxViewModel @Inject constructor(
   savedStateHandle: SavedStateHandle,
   private val getFooUseCase: GetFooUseCase,
@@ -21,12 +22,14 @@ class XxxViewModel @Inject constructor(
 ```
 Do not
 ```kotlin
+@HiltViewModel
 class XxxViewModel @Inject constructor(
   private val getFooUseCase: GetFooUseCase,
   savedStateHandle: SavedStateHandle,
   private val getBarUseCase: GetBarUseCase,
 ) : ViewModel()
 
+@HiltViewModel
 class XxxViewModel @Inject constructor(
   private val getFooUseCase: GetFooUseCase,
   private val getBarUseCase: GetBarUseCase,
