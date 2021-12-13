@@ -10,6 +10,28 @@
 - https://medium.com/androiddevelopers/viewmodels-and-livedata-patterns-antipatterns-21efaef74a54
 - 다만 데이터에 해당되는 `R.string.xxx`, `R.dimen.xxx`, `R.color.xxx`들은 사용할 수 있도록 함
   - (`R.id.xxx`, `R.layout.xxx`는 불가)
+- `SavedStateHandle`은 생성자의 첫번째에 위치한다.
+```kotlin
+// Do
+class XxxViewModel @Inject constructor(
+  savedStateHandle: SavedStateHandle,
+  private val getFooUseCase: GetFooUseCase,
+) : ViewModel()
+```
+```kotlin
+// Do not
+class XxxViewModel @Inject constructor(
+  private val getFooUseCase: GetFooUseCase,
+  savedStateHandle: SavedStateHandle,
+  private val getBarUseCase: GetBarUseCase,
+) : ViewModel()
+
+class XxxViewModel @Inject constructor(
+  private val getFooUseCase: GetFooUseCase,
+  private val getBarUseCase: GetBarUseCase,
+  savedStateHandle: SavedStateHandle,
+) : ViewModel()
+```
 
 
 ## UseCase
