@@ -180,6 +180,18 @@
 ...
 </style>
 ```
+- Base Style과 Theme의 경우는 앞에 `Base`를 붙인다.
+```xml
+<style name="Base.Theme" parent="..." />
+<style name="Base.Theme.Transparent">...</style>
+<style name="HeyDealerTheme" parent="Base.Theme">...</style>
+<style name="HeyDealerTheme.Transparent" parent="Base.Theme.Transparent" />
+
+<style name="Base.TextAppearance.HeyDealer" parent="...">...</style>
+<style name="Base.TextAppearance.HeyDealer.Headline">...</style>
+<style name="TextAppearance.HeyDealer.Headline1" parent="Base.TextAppearance.HeyDealer.Headline">...</style>
+<style name="TextAppearance.HeyDealer.Headline2" parent="Base.TextAppearance.HeyDealer.Headline">...</style>
+```
 
 ## Attribute
 - Attribute이름은 `camelCase`로 한다.
