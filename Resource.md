@@ -183,7 +183,9 @@
 - Base Style과 Theme의 경우는 앞에 `Base`를 붙인다.
 ```xml
 <style name="Base.Theme" parent="..." />
+<style name="Base.Theme.Transparent">...</style>
 <style name="HeyDealerTheme" parent="Base.Theme">...</style>
+<style name="HeyDealerTheme.Transparent" parent="Base.Theme.Transparent" />
 
 <style name="Base.TextAppearance.HeyDealer" parent="...">...</style>
 <style name="Base.TextAppearance.HeyDealer.Headline">...</style>
