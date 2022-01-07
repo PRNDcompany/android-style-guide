@@ -37,6 +37,19 @@ class XxxViewModel @Inject constructor(
 ) : ViewModel()
 ```
 
+### Event
+: [MVVM의 ViewModel에서 이벤트를 처리하는 방법 6가지](https://medium.com/prnd/mvvm%EC%9D%98-viewmodel%EC%97%90%EC%84%9C-%EC%9D%B4%EB%B2%A4%ED%8A%B8%EB%A5%BC-%EC%B2%98%EB%A6%AC%ED%95%98%EB%8A%94-%EB%B0%A9%EB%B2%95-6%EA%B0%80%EC%A7%80-31bb183a88ce)
+
+이벤트 이름은 {행위}-{대상}-{결과} 순서의 이름 규칙을 가진다.
+```kotlin
+object ShowCarInfo: Event() // 행위: 보여준다, 대상: 차량 정보
+object UploadImageSuccess: Event() // 행위: 업로드하다. 대상: 이미지, 결과: 성공
+```
+- Event의 의미에 따라 동사의 형태는 자유롭게 사용한다. (과거형, 현재형)
+- Success, Complete와 같이 의미가 이중적일 때에는 기대하는 동작에 따라 적절한 이름을 선택한다.
+
+
+
 
 ## UseCase
 - 클래스는 각 한개의 usecase를 갖는다.
