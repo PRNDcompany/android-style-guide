@@ -10,6 +10,7 @@
 - [Gradle](Gradle.md)
 - [Architecture](Architecture.md)
 - [Test](Test.md)
+- [IDE](IDE.md)
 
 
 # 기타
