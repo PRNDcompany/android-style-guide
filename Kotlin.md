@@ -27,6 +27,18 @@ when (color) {
 > 
 > [Exhaustive plugin & 대안](https://github.com/cashapp/exhaustive#alternatives-considered)
 
+
+### Labmda
+- invoke() 함수는 nullable이 아닐 때에는 생략해서 사용한다.
+```kotiln
+val foo: () -> Unit
+val bar: (() -> Unit)?
+
+foo.invoke() // X
+foo() // O
+bar?.invoke() // O
+```
+
 ## Naming Rules
 ### LiveData
 - xml에서 클릭시 사용되는 LiveData의 변수명은 xxxEvent로 선언: [Google blueprint 코드 참고](https://github.com/android/architecture-samples/blob/272cd63c8e6e37eecc0398a19415f7c4dc6950d5/app/src/main/java/com/example/android/architecture/blueprints/todoapp/taskdetail/TaskDetailViewModel.kt#L60)
