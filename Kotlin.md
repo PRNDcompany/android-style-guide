@@ -9,25 +9,6 @@
 
 > [Kotlin: should I define Function or Property?](https://blog.kotlin-academy.com/kotlin-should-i-define-function-or-property-6786951da909)
 
-### Exhaustive when statement
-when statement를 enum class 또는 sealed class와 함께 쓰는 경우에는 `exhaustive` 확장 변수를 통해 강제로 when expression으로 변경하여 사용한다.
-```kotlin
-enum class Color {
-    RED, BLUE, GREEN
-}
-
-when (color) {
-    RED -> // ...
-    BLUE -> // ...
-    GREEN -> // ...
-}.exhaustive
-```
-
-> [Exhaustive when statement (공식 지원)](https://kotlinlang.org/docs/whatsnew1530.html#exhaustive-when-statements-for-sealed-and-boolean-subjects)
-> 
-> [Exhaustive plugin & 대안](https://github.com/cashapp/exhaustive#alternatives-considered)
-
-
 ### Labmda
 - invoke() 함수는 nullable이 아닐 때에는 생략해서 사용한다.
 ```kotiln
