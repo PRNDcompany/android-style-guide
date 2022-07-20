@@ -37,7 +37,7 @@ package com.example.myProject
 ```
 - [Kotlin의 코딩컨벤션](https://kotlinlang.org/docs/coding-conventions.html#naming-rules) 에서는 **camelCase를 허용**하고 있고, 
 [안드로이드의 코딩컨벤션](https://developer.android.com/kotlin/style-guide#package_names) 에서는 **항상 소문자로만 작성**하도록 나와 있으나
-헤이딜러에서는 내부논의를 거쳐 위와 같은 규칙으로 사용되도록 한다.
+팀 내부의 규칙에 따라 카멜 케이스를 허용할 수 있다
 
 ### LiveData
 - xml에서 클릭시 사용되는 LiveData의 변수명은 xxxEvent로 선언: [Google blueprint 코드 참고](https://github.com/android/architecture-samples/blob/272cd63c8e6e37eecc0398a19415f7c4dc6950d5/app/src/main/java/com/example/android/architecture/blueprints/todoapp/taskdetail/TaskDetailViewModel.kt#L60)
