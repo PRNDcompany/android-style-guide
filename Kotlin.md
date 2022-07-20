@@ -21,6 +21,24 @@ bar?.invoke() // O
 ```
 
 ## Naming Rules
+### Package
+- package 이름은 소문자로 작성한다.
+```kotlin
+package kr.co.prnd.domain
+```
+- underscore(`_`)는 사용하지 않는다.
+```kotlin
+// WRONG!
+package kr.co.prnd.domain_module
+```
+- 예외적으로 불가피하게 연결된 단어를 붙여서 사용해야 하는 경우에는 camelCase로 처리한다.
+```kotlin
+package com.example.myProject
+```
+- [Kotlin의 코딩컨벤션](https://kotlinlang.org/docs/coding-conventions.html#naming-rules) 에서는 **camelCase를 허용**하고 있고, 
+[안드로이드의 코딩컨벤션](https://developer.android.com/kotlin/style-guide#package_names) 에서는 **항상 소문자로만 작성**하도록 나와 있으나
+팀 내부의 규칙에 따라 카멜 케이스를 허용할 수 있다
+
 ### LiveData
 - xml에서 클릭시 사용되는 LiveData의 변수명은 xxxEvent로 선언: [Google blueprint 코드 참고](https://github.com/android/architecture-samples/blob/272cd63c8e6e37eecc0398a19415f7c4dc6950d5/app/src/main/java/com/example/android/architecture/blueprints/todoapp/taskdetail/TaskDetailViewModel.kt#L60)
 
