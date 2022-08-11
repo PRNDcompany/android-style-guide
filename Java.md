@@ -15,48 +15,42 @@ public void loadCar(Context context, int hashId, CarListener listener);
 
 ### Key
 
-| Prefix | 설명 |
-| ------------- | ------------- |
-| `EXTRA_` | Intent |
-| `PREF_` | SharedPreferences |
-| `ARGUMENT_` | Fragment Arguments |
-| `QUERY_` | Deeplink query parameter key |
-- Key-Value로 활용되는 컴포넌트들의 Key는  `static final`로 정의한다.
+- Key-Value로 활용되는 컴포넌트들의 Key는  `static final String KEY_XXX`로 정의한다.
 - Key로 정의된 이름의 String값은 동일하게 맞춰준다.
 - Deeplink에서 사용되는 Query Parameter의 경우 `aaa://bb?key1=value1&key2=value2`와 같은 방식으로 전달되기때문에 query key와 맞춰준다.
 ```java
-public static final String EXTRA_HASH_ID = "EXTRA_HASH_ID";
-public static final String EXTRA_TRADE = "EXTRA_TRADE";
-public static final String QUERY_REFERRER = "referrer";
+public static final String KEY_HASH_ID = "KEY_HASH_ID";
+public static final String KEY_TRADE = "KEY_TRADE";
+public static final String QUERY_REFERRER = "referrer"; // deeplink
 ```
 
 ### Key with Activity/Fragment
 #### Activity
-- Activity Intent에 `EXTRA_`를 넣어주는 경우, 해당 Activity에 `startActivity()` 혹은 `getIntent()`를 구현하고 이를 사용한다.
+- Activity Intent에 `KEY_`를 넣어주는 경우, 해당 Activity에 `startActivity()` 혹은 `getIntent()`를 구현하고 이를 사용한다.
 ```java
 public static void startActivity(Context context, @DrawableRes int photoResourceId) {  
   Intent intent = new Intent(context, PhotoDetailActivity.class);  
-  intent.putExtra(EXTRA_PHOTO_RESOURCE_ID, photoResourceId);  
+  intent.putExtra(KEY_PHOTO_RESOURCE_ID, photoResourceId);  
   context.startActivity(intent);  
 }
 ```
 ```java
 public static Intent getIntent(Context context, String brandId, String brandName) {  
   Intent intent = new Intent(context, SelectCarActivity.class);  
-  intent.putExtra(EXTRA_BRAND_ID, brandId);  
-  intent.putExtra(EXTRA_BRAND_NAME, brandName);  
+  intent.putExtra(KEY_BRAND_ID, brandId);  
+  intent.putExtra(KEY_BRAND_NAME, brandName);  
   return intent;  
 }
 ```
 #### Fragment
-- Fragment에 `ARGUMENT_`를 넣어주는 경우, 해당 Fragment에 `newInstance()`를 구현하고 이를 사용한다.
+- Fragment에 `KEY_`를 넣어주는 경우, 해당 Fragment에 `newInstance()`를 구현하고 이를 사용한다.
 - Fragment 생성자의 Parameter로 넘기지 않는다.
 [Best Practice to Instantiate Fragments with Arguments in Android](https://gunhansancar.com/best-practice-to-instantiate-fragments-with-arguments-in-android/)
 ```java
 public static UserFragment newInstance(User user) {
 	UserFragment fragment = new UserFragment();
 	Bundle args = new Bundle();
-	args.putParcelable(ARGUMENT_USER, user);
+	args.putParcelable(KEY_USER, user);
 	fragment.setArguments(args)
 	return fragment;
 }
