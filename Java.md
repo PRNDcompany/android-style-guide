@@ -20,7 +20,7 @@ public void loadCar(Context context, int hashId, CarListener listener);
 - Deeplink에서 사용되는 Query Parameter의 경우 `aaa://bb?key1=value1&key2=value2`와 같은 방식으로 전달되기때문에 query key와 맞춰준다.
 ```java
 public static final String KEY_HASH_ID = "KEY_HASH_ID";
-public static final String KEY_TRADE = "KEY_HASH_ID";
+public static final String KEY_TRADE = "KEY_TRADE";
 public static final String QUERY_REFERRER = "referrer"; // deeplink
 ```
 
