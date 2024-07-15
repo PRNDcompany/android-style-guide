@@ -22,3 +22,11 @@ data class User(
     val email: String,
 )
 ```
+
+## Wildcard import 🚫
+import가 꼬이는 현상을 방지하기 위해 Wildcard import 설정은 사용하지 않고,
+single name import 설정만 사용한다
+
+### 설정 방법
+- Preferences | Editor | Code Style | Kotlin | Imports
+- Use single name import 체크
