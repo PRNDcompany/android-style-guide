@@ -2,8 +2,10 @@
 
 ## ui module vs feature module
 - `:ui-xxx` module
-  - **PRND 도메인에 관련된 DTO를 사용하지 않고** 순수 UI만 가진 모듈
-  - ex. 자동차 번호판 UI 컴포넌트
+  - 공통 UI 컴포넌트를 가진 모듈
+  - 특정 도메인을 의존하지 않는다
+  - ex. `:ui-image`, `:ui-carNumber`
 - `:feature-xxx` module
-  - **PRND 도메인에 관련된 DTO를 사용하는** UI를 가진 모듈
-  - ex. 사고이력 DTO를 사용하는 사고이력조회화면
+  - feature에 대한 UI, ViewModel을 가진 모듈
+  - 특정 도메인을 의존한다
+  - ex. `:feature-carHistory`, `:feature-market`
